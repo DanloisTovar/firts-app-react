@@ -5,19 +5,28 @@ export const CounterApp = ({ titulo, valor }) => {
     // !useState:
     const [contador, setContador] = useState(valor);
 
-    // !onClickHandler:
-    const onClickHandler = (e) => {
-        e.preventDefault();
+    // !onClickHandlerSuma:
+    const onClickHandlerSuma = () => {
         // modificador del estado
         setContador(contador + 1);
         // estado final
         console.log(contador);
     };
+    // !onClickHandlerResta
+    const onClickHandlerResta = () => setContador(contador - 1);
+
+    // estado final
+    console.log(contador);
+
+    const onClickHandlerReiniciar = () => setContador(valor);
+
     return (
         <>
             <h1>{titulo}</h1>
             <h2>{contador}</h2>
-            <button onClick={onClickHandler}>Contador + 1</button>
+            <button onClick={onClickHandlerSuma}>Contador + 1</button>
+            <button onClick={onClickHandlerResta}>Contador - 1</button>
+            <button onClick={onClickHandlerReiniciar}>Reiniciar</button>
         </>
     );
 };
