@@ -16,10 +16,9 @@ export const CounterApp = ({ titulo, valor }) => {
     const onClickHandlerResta = () => setContador(contador - 1);
 
     // estado final
-    console.log(contador);
 
     const onClickHandlerReiniciar = () => setContador(valor);
-
+    // console.log(valor);
     return (
         <>
             <h1>{titulo}</h1>
